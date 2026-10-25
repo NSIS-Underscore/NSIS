@@ -1,0 +1,206 @@
+/* Grundlegendes Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Navigation mit sanftem Schatten */
+header {
+    background: rgba(15, 23, 42, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #1e293b;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #f8fafc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover-Effekt für Navigation */
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* Hero Bereich mit Animation */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* Cooler Button mit Hover-Effekt & Animation */
+.cta-btn {
+    background: linear-gradient(135deg, #0ea5e9, #2563eb);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.4);
+}
+
+/* Karten-Sektion mit Hover-Effekten */
+.card-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Cooler Hover-Effekt für die Karten */
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #0ea5e9;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.card p {
+    color: #94a3b8;
+}
+
+/* Cookie Banner Styling */
+.cookie-banner {
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    background: #1e293b;
+    border-top: 1px solid #334155;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: bottom 0.5s ease;
+    z-index: 2000;
+}
+
+.cookie-banner.show {
+    bottom: 0;
+}
+
+.cookie-banner a {
+    color: #38bdf8;
+}
+
+#accept-cookies {
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#accept-cookies:hover {
+    background: #0284c7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #090d16;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #38bdf8;
+}
+
+/* Keyframe Animation fürs Laden */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
